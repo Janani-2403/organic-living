@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/about.css";
+import whyChooseImg from "../assets/why choose.jpg";
 
 export default function About() {
   return (
@@ -19,10 +20,11 @@ export default function About() {
 
         <div className="hero-image">
           {/* 🌿 Using Unsplash image instead of local file */}
-          <img
-            src="/src/assets/about-why-choose.webp"
-            alt="Organic farm field"
-          />
+         <img
+           src={whyChooseImg}
+           alt="Organic farm"
+           loading="lazy"
+         />
         </div>
       </div>
 
