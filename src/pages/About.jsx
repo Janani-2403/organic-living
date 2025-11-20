@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/about.css";
-import whyChooseImg from "../assets/why choose.jpg";
+import whyChooseImg from "../assets/about-why-choose.webp";
+
 
 export default function About() {
   return (
