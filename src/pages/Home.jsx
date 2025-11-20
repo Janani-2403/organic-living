@@ -3,7 +3,8 @@ import HeroCarousel from "../components/HeroCarousel";
 import ProductCard from "../components/ProductCard";
 import { fetchProducts } from "../data/fetchProducts";
 import { useStore } from "../context/StoreContext";
-import "../styles/home.css"; // Ensure global styles are loaded
+import "../styles/home.css"; 
+import whyChooseImg from "../assets/why choose.jpg";
 
 
 export default function Home() {
@@ -58,11 +59,11 @@ export default function Home() {
           </div>
 
           <div className="about-image">
-            <img
-              src="/src/assets/why choose.jpg"
-              alt="Organic farm"
-              loading="lazy"
-            />
+           <img
+  src={whyChooseImg}
+  alt="Organic farm"
+  loading="lazy"
+/>
           </div>
         </div>
       </section>
