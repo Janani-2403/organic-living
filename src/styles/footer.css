@@ -1,0 +1,71 @@
+/* ================= FOOTER ================= */
+
+/* --- Footer Styles --- */
+.site-footer {
+  background: linear-gradient(90deg, #81c784 0%, #43a047 100%);
+  color: white;
+  padding-top: 3rem;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  margin-top: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 2rem;
+}
+
+.footer-section {
+  flex: 1 1 px;
+}
+
+.footer-section h4 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0b6c11;
+}
+
+.footer-section p {
+  color: #2a2828;
+  margin: 0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+  color: #2f372f;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #017a07;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1.2rem 0;
+  font-size: 0.9rem;
+  color: #4b4b4b;
+  background-color: #dcedc8; /* slightly darker green tone */
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}

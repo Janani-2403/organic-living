@@ -1,0 +1,220 @@
+/* ================= PRODUCT DETAIL ================= */
+.product-detail {
+  padding: 2.2rem 0;
+}
+
+/* ============= GRID LAYOUT ============= */
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.6rem;
+  align-items: stretch;
+}
+
+/* Equal card style for both columns */
+.detail-grid > div {
+  /* background: #ffffff; */
+  padding: 1.2rem 1.4rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============= IMAGE GROUP ============= */
+.image-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+/* Reduce image size for shorter layout */
+.image-group img {
+  width: 100%;
+  max-width: 445px;      /* reduced from 520px */
+  max-height: 260px;     /* limits image height */
+  object-fit: cover;     /* maintains look */
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  /* margin-left: 35px; */
+}
+
+/* Back button spacing */
+.back-btn {
+  margin-top: 1rem;
+}
+
+/* ============= TEXT CONTENT ============= */
+h2 {
+  color: var(--green);
+  margin-top: 10px;
+  font-size: 1.35rem; /* reduced */
+}
+
+.desc {
+  color: var(--muted);
+  line-height: 1.45;
+  font-size: 0.92rem;  /* reduced */
+  margin-bottom: 0.6rem;
+}
+
+.price {
+  color: var(--green);
+  font-size: 1.2rem;   /* reduced */
+  font-weight: 700;
+}
+
+/* ==== PRICE & QUANTITY ROW ==== */
+.price-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.4rem 0 0.6rem;
+}
+
+.qty-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #b7dfb8;
+  background: #f4faf4;
+  border-radius: 8px;
+  padding: 3px 8px;
+  gap: 10px;
+}
+
+.qty-box button {
+  background: var(--green);
+  color: #fff;
+  border: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qty-box span {
+  min-width: 22px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Total price */
+.total-price {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  color: var(--green);
+  font-weight: 600;
+}
+
+
+.price span {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* ============= BUTTONS ============= */
+.btn-row {
+  margin: 0.8rem 0;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+/* ============= DETAILS TABLE ============= */
+.details-section {
+  margin-top: 1.2rem;
+}
+
+.details-section h3 {
+  color: var(--green);
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem; /* reduced */
+}
+
+.details-table {
+  width: 100%;
+  /* border-collapse: collapse; */
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  font-size: 0.88rem; /* smaller font */
+  border: 2px solid rgb(215, 213, 213);
+}
+
+.details-table td {
+  padding: 8px 10px;  /* reduced padding */
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.details-table tr:last-child td {
+  border-bottom: none;
+}
+
+.details-table td:first-child {
+  width: 38%;
+  font-weight: 600;
+  background: #f6fbf6;
+  color: #2f3e2c;
+}
+
+.details-table tr:hover td {
+  background: #f3f8f3;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+/* ============= HIGHLIGHTS ============= */
+.highlight-list li {
+  list-style: "🌿  ";
+  margin-left: 1rem;
+  font-size: 0.92rem;  /* reduced */
+  line-height: 1.45;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ----- MOBILE IMAGE CAROUSEL ----- */
+@media (max-width: 500px) {
+  .image-group {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 1rem;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 0.5rem;
+  }
+
+  .image-group img {
+    min-width: 100%;
+    max-height: 220px;
+    scroll-snap-align: center;
+  }
+
+  .image-group::-webkit-scrollbar {
+    display: none;
+  }
+
+  .details-table {
+    font-size: 0.82rem;
+  }
+
+  .details-table td {
+    padding: 7px 8px;
+  }
+
+  .highlight-list li {
+    font-size: 0.88rem;
+  }
+}

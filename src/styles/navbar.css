@@ -1,0 +1,224 @@
+/* HEADER BASE */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(90deg, #81c784, #43a047);
+  padding: 0.75rem 2rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px;
+  margin: auto;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+/* BRAND */
+.brand-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.brand {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #075e31;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.brand:hover { transform: scale(1.05); }
+
+/* NAV LINKS */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-shrink: 0;
+}
+
+.nav-link {
+  font-size: 1rem;
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  background: #bdf3c1;
+  color: #026433;
+}
+
+/* ACTION BUTTONS */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+/* BUTTON BASE */
+.cart-btn,
+.auth-btn,
+.logout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  padding: 10px 0;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.cart-btn { background: #2f855a; color: white; gap: 6px; }
+.cart-btn:hover { background: #276749; }
+
+.auth-btn.login { background: #2f855a; color: white; }
+.auth-btn.login:hover { background: #276749; }
+
+.auth-btn.register {
+  background: #2f855a;
+  border: 2px solid #2f855a;
+  color: white;
+}
+.auth-btn.register:hover { background: #276749; }
+
+.logout-btn {
+  background: #2f855a;
+  border: 2px solid #2f855a;
+  color: white;
+}
+.logout-btn:hover { background: #276749; }
+
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  font-size: 1.9rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* MOBILE actions hidden default */
+.mobile-actions { display: none; }
+
+/* 👉 DESKTOP RESET (≥ 1026px) */
+@media (min-width: 1121px) {
+  .nav {
+    position: static !important;
+    height: auto !important;
+    width: auto !important;
+    padding: 0 !important;
+    flex-direction: row !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    gap: 2rem;
+  }
+
+   .mobile-nav {
+    display: none !important;
+  }
+
+  /* ⭐ Reset desktop nav and show header actions */
+  .desktop-nav {
+    display: flex !important;
+  }
+
+  .header-actions {
+    display: flex !important;
+  }
+
+  .menu-toggle {
+    display: none !important;
+  }
+
+  .nav-overlay { display: none !important; }
+}
+
+/* 👉 TABLET & MOBILE (≤ 1025px) */
+@media (max-width: 1120px) {
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .header-actions { display: none; }
+
+  .nav {
+    position: fixed;
+    right: -260px;
+    top: 0;
+    height: 100vh;
+    width: 260px;
+    padding: 80px 20px;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: -3px 0 12px rgba(0,0,0,0.2);
+    transition: 0.35s;
+    z-index: 1001;
+  }
+
+  .nav.open { right: 0; }
+
+  .mobile-actions {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .mobile-actions .auth-btn,
+  .mobile-actions .cart-btn {
+    width: 100%;
+  }
+
+   .desktop-nav {
+    display: none !important;
+  }
+
+  .header-actions {
+    display: none !important;
+  }
+}
+
+/* SMALL SCREENS (≤ 400px) */
+@media (max-width: 400px) {
+  .brand { font-size: 1.4rem; white-space: nowrap; }
+}
+
+/* EXTRA SMALL (≤ 360px) */
+@media (max-width: 360px) {
+  .site-header { padding: 0.5rem 1rem; }
+  .brand { font-size: 1.3rem; }
+  .nav { width: 220px; }
+  .mobile-actions .cart-btn,
+  .mobile-actions .auth-btn { font-size: 0.9rem; padding: 8px; }
+}
+
+/* OVERLAY */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.45);
+  z-index: 900;
+}
+
+
+

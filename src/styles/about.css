@@ -1,0 +1,264 @@
+/* ================= CTA SECTION ================= */
+.about-organic {
+  background-color: #aed582; 
+  padding: 4rem 2rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+
+.about-text {
+  flex: 1 1 45%;
+}
+
+.about-text h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width:360px){
+  .about-text h3{
+  font-size: 20px;
+  }
+}
+
+.about-text p {
+  color: #4e4e4e;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.about-text ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-text li {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+.about-image {
+  flex: 1 1 45%;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+@media screen and (max-width:360px){
+  .about-image img{
+    width: 100%;
+  }
+}
+
+.about-image img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+.about-page {
+  background-color: #f1f8e9;
+  padding: 4rem 2rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Hero section layout */
+.about-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1 1 45%;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width:360px){
+  .hero-text h1{
+    font-size: 20px;
+    margin-top: -20px;
+  }
+}
+
+.hero-text span {
+  color: #4fb454;
+}
+
+.hero-text p {
+  color: #4e4e4e;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.hero-image {
+  flex: 1 1 45%;
+}
+
+.hero-image img {
+  width: 450px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+@media screen and (max-width:360px){
+  .hero-image img{
+    margin-top: -15px;
+    width: 100%;
+  }
+}
+
+.hero-image img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Mission and values */
+.about-section {
+  text-align: center;
+  margin: 3rem auto;
+  max-width: 800px;
+}
+
+@media screen and (max-width:360px){
+  .about-section{
+    margin-top: -10px;
+    text-align: center;
+  }
+}
+
+.about-section h2 {
+  color: #2e7d32;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width:360px){
+  .about-section h2 {
+  color: #2e7d32;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+}
+
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 3rem auto;
+}
+
+@media screen and (max-width:360px){
+  .values-grid{
+    margin-left: -20px;
+  }
+}
+
+.value-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media screen and (max-width:360px){
+  .value-card{
+    background: #c9c8c8;
+  }
+}
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer quote */
+.about-footer {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+@media screen and (max-width:360px){
+  .about-footer{
+    margin-top: -55px;
+    margin-bottom: -60px;
+  }
+}
+.about-footer h2 {
+  color: #388e3c;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width:360px){
+  .about-footer h2{
+    font-size: 18px;
+    max-width: 800px;
+  }
+}
+.about-footer p {
+  color: #4e4e4e;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

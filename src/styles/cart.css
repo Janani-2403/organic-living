@@ -1,0 +1,69 @@
+.cart-container{
+   max-width: var(--container);
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.qty-controls button {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #2e7d32;
+  background: #e8f5e9;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 0;
+  font-weight: 600;
+}
+
+/* .qty-controls span {
+  min-width: 20px;
+  text-align: center;
+  font-weight: 600;
+} */
+
+
+/* === CART PAGE RESPONSIVE (max-width: 480px) === */
+@media (max-width:768px) {
+
+  /* Switch layout to single column */
+  .cart-container > div {
+    display: block !important;
+  }
+
+  /* Cart item image scale */
+  .cart-container img {
+    width: 80px !important;
+    height: 70px !important;
+  }
+
+  /* Reduce title font slightly */
+  .cart-container h4 {
+    font-size: 15px !important;
+  }
+
+  /* Summary box full width */
+  .cart-container aside {
+    width: 100% !important;
+    margin-top: 1.2rem;
+  }
+
+  /* Buttons full width */
+  .cart-container button {
+    font-size: 14px !important;
+    padding: 9px !important;
+    width: 100% !important;
+  }
+
+  /* Reduce padding for smaller screens */
+  .cart-container {
+    padding: 1.2rem !important;
+  }
+}
